@@ -11,7 +11,7 @@ st.title("📊 Analisis & Prediksi Lama Tunggu Kerja Alumni")
 # =========================
 # LOAD DATA
 # =========================
-@st.cache_data
+@st.cache_data (ttl=60)
 def load_data():
     df = pd.read_excel("tracer_studi.xlsx")
     df = df[df["Tahun_lulus"] >= 2010]
@@ -79,3 +79,4 @@ ax.set_ylabel("Bulan")
 ax.legend()
 
 st.pyplot(fig)
+
