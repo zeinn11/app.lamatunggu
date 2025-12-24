@@ -36,6 +36,8 @@ def load_data():
     return ts
 
 ts = load_data()
+# FILTER DATA MULAI 2018
+df = df[df["Tahun_lulus"] >= 2018]
 
 # =========================
 # TAMPILKAN DATA AKTUAL
@@ -79,4 +81,5 @@ ax.set_ylabel("Bulan")
 ax.legend()
 
 st.pyplot(fig)
+
 
